@@ -7,23 +7,73 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			.download-button {
-				padding: 10px 20px;
-				font-size: 16px;
-				color: black;
-				background-color: white;
-				text-align: center;
+			.buttons-container {
+				display: flex;  
+				gap: 25px;  
+				flex-wrap: wrap; 
+			}
+			.about-me-image img {
+				width: 300px; 
+				height: auto; 
+				object-fit: contain;
+				border-radius: 10px;
+			}
+			
+
+			.download-button,
+			.project-button {
+				padding: 5px 20px;
+				font-size: 15px;
+				color: rgb(32, 30, 30);
+				background-color: rgba(93,168,155,255);
 				border-radius: 40px;
 				text-decoration: none;
-				border-style: solid;
+				border: solid 1px rgb(61, 70, 71);
 				display: inline-block;
-				vertical-align: middle;
+				text-align: center;
+				transition: background-color 0.3s ease;
+				margin-bottom: 60px;
 			}
 
-			.download-button:hover {
-				background-color: #ffffff;
-				color: black;
+			.project-button:hover {
+				background-color: #265c63;
 			}
+
+			.col-6.col-12-medium.imp-medium {
+				display: flex;
+				margin-top: 30px;
+				margin-bottom: 10px;
+				justify-content: flex-end;
+			}
+			.tech-stack {
+					margin-bottom: 10px;
+					display: flex;
+					flex-wrap: wrap;
+					gap: 10px; 
+				}
+
+			.tech-button {
+					display: inline-block;
+					background-color: #3e7d7d;
+					color: white;
+					font-size: 12px;
+					padding: 3px 12px;
+					border-radius: 10px;
+					text-align: center;
+					flex: 1 1 auto; 
+					min-width: 100px;
+					text-align: center;
+				}
+
+			.tech-button:hover {
+					background-color: #3e9d8b;
+				}
+				.image.fit img {
+					width: 100%;
+					height: 200px; 
+					object-fit: cover; 
+					border-radius: 10px;
+				}
 
 			.icon {
 				display: inline-block;
@@ -31,6 +81,32 @@
 				margin-left: 10px;
 				font-size: 24px;
 			}
+			#one {
+				margin-bottom: 30px;
+				padding-bottom: 40px;
+			}
+
+			#two {
+				margin-top: 20px;
+				padding-top: 0;
+			}
+
+			.image img {
+				width: 500%; 
+				max-width: 400px; 
+				height: auto; 
+				display: block; 
+				margin: 0 auto; 
+			}
+
+			.row:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+
+
+
 		</style>
 	</head>
 	<body class="is-preload">
@@ -41,7 +117,6 @@
 				<span class="icon solid major fa-cloud"></span>
 				<h1>Hi, I'm <strong>Zahra</strong><br />
 				Student, Developer, and a Latte Connoisseur</h1>
-				
 				<ul class="actions special">
 					<li><a href="#one" class="button scrolly">Learn More</a></li>
 				</ul>
@@ -56,83 +131,117 @@
 						<header class="major">
 							<h2>About Me</h2>
 						</header>
-						<p>I am a fourth-year Computer Science student at Wilfrid Laurier University with experience in coding with Python, Java, C, Swift, and React. When I'm not in school, I enjoy participating in hackathons with my friends and creating new projects.</p>
+						<p>Hello, I'm Zahra, a passionate Computer Science student at Wilfrid Laurier University. My journey in tech has led me to specialize in Machine Learning, mobile development and full-stack. I’m particularly driven by the potential of technology to enhance accessibility and mental health, and I’m always excited about projects that aim to solve real world challenges.</p>
 						
-						<a href="https://drive.google.com/file/d/18vcT9kESEny58fosQm_jelH4CAUh-cL8/view?usp=sharing" class="download-button" download>Resume</a>
-						<a href="https://github.com/zahramoh517" class="icon brands alt fa-github"><span class="label">GitHub</span></a>
+						<p>When I'm not coding, I’m likely enjoying a cup of latte and exploring new ways to stay curious about the world around me!</p>
+
+						<div class="buttons-container">
+							<a href="https://drive.google.com/file/d/18bkr6O83zfc7b1RXWhbdkS8d1eJKUiaP/view?usp=sharing" class="download-button">View Resume</a>
+							<a href="https://github.com/zahramoh517" class="download-button">GitHub</a>
+							<a href="#two" class="project-button scrolly">My Projects</a>
+
+						</div>
+						
 					</div>
+					<div class="col-6 col-12-medium imp-medium">
+						<span class="image about-me-image"><img src="images/Screenshot 2025-01-17 at 9.43.39 PM.png" alt="" /></span>
+					</div>
+					
 				</div>
 			</div>
 		</section>
-	</body>
-</html>
 
 		<!-- Two -->
-			<section id="two" class="main style1 special">
-				<div class="container">
-					<header class="major">
-						<h2>Projects</h2>
-					</header>
-					<div class="row gtr-150">
-						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/Screenshot 2024-07-27 at 11.06.03 PM.png" alt="" /></span>
-							<h3>EcoEats</h3>
-							<p>Utilized CoreML with Swift to train an AI model for recognizing food ingredients via live camera scanning and engineered a recipe generator based on the scanned ingredients using Gemini AI.</p>
-							<ul class="actions special">
-								<ul class="actions special">
-									<li><a href="https://github.com/zahramoh517" class="button scrolly">Learn More</a></li>
-								</ul>
-
-							</ul>
-						</div>
-						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/Screenshot 2024-07-27 at 11.08.24 PM.png" alt="" /></span>
-							<h3>SoulCare</h3>
-							<p>Used OpenCV to implement real-time face recognition for detecting users' emotions and storing the data to provide a comprehensive report on the user's mood for the day, and created a dataset using Google Colaboratory to train the AI model.</p>
-							<ul class="actions special">
-								<ul class="actions special">
-									<li><a href="https://github.com/zahramoh517" class="button scrolly">Learn More</a></li>
-								</ul>
-							</ul>
-						</div>
-						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/Screenshot 2024-07-27 at 11.10.29 PM.png" alt="" /></span>
-							<h3>Sorting Visualizer</h3>
-							<p>Programmed a sorting visualizer using React's JSX and CSS, offering users the option to select from merge, quick, heap, or bubble sorting algorithms, and visualized the sorting process by using JavaScript and ReactJS to highlight the arrays the selected algorithm is comparing.</p>
-							<ul class="actions special">
-								<ul class="actions special">
-									<li><a href="https://github.com/zahramoh517" class="button scrolly">Learn More</a></li>
-								</ul>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</section>
-
-
-
-
-
-		<!-- Footer -->
-			<section id="footer">
+		<section id="two" class="main style1 special">
+			<div class="container">
 				<header class="major">
-					<h2>Contact me</h2>
+					<h2>Projects</h2>
 				</header>
-				<ul class="icons">
-					<li><a href="https://www.linkedin.com/in/zahra-mohamed-642948223/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-					<li><a href="https://github.com/settings/profile" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-					<li><a href="mailto:zahramoh517@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-				</ul>
-			
-			</section>
+				<div class="row gtr-150">
+					<div class="col-4 col-12-medium">
+						<span class="image fit"><img src="images/Screenshot 2025-01-17 at 10.26.53 PM.png" alt="" /></span>
+						<h3>ProPathway</h3>
+						<div class="tech-stack">
+							<span class="tech-button">JavaScript</span>
+							<span class="tech-button">React</span>
+							<span class="tech-button">Firebase</span>
+						</div>
+						<p>Contributed to the creation of a job search website, helping users organize their job applications. Integrated OpenAI APIs for personalized interview questions and resume critiques.</p>
+						<a href="https://github.com/dulanipali/pathwaypro" class="project-button">GitHub</a>
+						<a href="https://pathwaypro.vercel.app" class="project-button">Website</a>
+					</div>
+					<div class="col-4 col-12-medium">
+						<span class="image fit"><img src="images/Screenshot 2024-07-27 at 11.08.24 PM.png" alt="" /></span>
+						<h3>SoulCare</h3>
+						<div class="tech-stack">
+							<span class="tech-button">Swift</span>
+							<span class="tech-button">OpenCV</span>
+							<span class="tech-button">Cohere</span>
+						</div>
+						<p>An iOS app to promote mental health awareness by detecting and logging user emotions with OpenCV, Integrated the Cohere API to recommend activities for improving mental health.</p>
+						<a href="https://github.com/zahramoh517/emotion_recognition-" class="project-button">GitHub</a>
+					</div>
+					<div class="col-4 col-12-medium">
+						<span class="image fit"><img src="images/Screenshot 2025-02-15 at 2.22.44 PM.png" alt="" /></span>
+						<h3>CashQuest</h3>
+						<div class="tech-stack">
+							<span class="tech-button">Java</span>
+							<span class="tech-button">Firebase</span>
+						</div>
+						<p>An Android app with an OCR receipt scanner using Firebase ML Kit. Added multi language support and used Firebase Storage to manage expenses, track goals, and add milestones for gamified progress.</p>
+						<a href="https://github.com/zahramoh517" class="project-button">Learn More</a>
+					</div>
+					<div class="col-4 col-12-medium">
+						<span class="image fit"><img src="images/Screenshot 2025-02-15 at 2.27.26 PM.png" alt="" /></span>
+						<h3>FlipSmart</h3>
+						<div class="tech-stack">
+							<span class="tech-button">Python</span>
+							<span class="tech-button">Stripe</span>
+							<span class="tech-button">OpenAI</span>
+						</div>
+						<p>A web application that generates flashcards based on user entered topics and transforms article URLs into interactive flashcards using ChatGPT and Beautiful Soup</p>
+						<a href="https://github.com/malika2470/FlashcardSaaS" class="project-button">GitHub</a>
+						
+					</div>
+					<div class="col-4 col-12-medium">
+						<span class="image fit"><img src="images/Screenshot 2025-02-15 at 2.29.39 PM.png" alt="" /></span>
+						<h3>AI Schizophrenia Detection</h3>
+						<div class="tech-stack">
+							<span class="tech-button">Python</span>
+							<span class="tech-button">TensorFlow</span>
+							<span class="tech-button">Keras</span>
+						</div>
+						<p>A model that assist in schizophrenia detection using pre-trained CNNs. Used data augmentation to improve reliability and built a Gradio interface for data predictions.</p>
+						<a href="https://github.com/light-c0d3/CP468_Project" class="project-button">GitHub</a>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+
+
+
+		
+		<!-- Footer -->
+		<section id="footer">
+			<header class="major">
+				<h2>Contact me</h2>
+			</header>
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/zahra-mohamed-642948223/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/zahramoh517" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+				<li><a href="mailto:zahramoh517@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+		</section>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
